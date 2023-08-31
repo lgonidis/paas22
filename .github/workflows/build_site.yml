@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t paas23
     - name: Run the container 
-      run: docker run -it -v `pwd`:/home/dev/paas22 --rm paas23
+      run: docker run -v `pwd`:/home/dev/paas22 --rm paas23
     - name: deploying
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
