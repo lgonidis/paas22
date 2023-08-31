@@ -1,7 +1,7 @@
 ## How to build
 
 The lecture slides and notes should build automatically via a github action with
-the output places in the `_site` folder
+the output deployed to the `gh_pages` branch
 
 ### Building locally
 
