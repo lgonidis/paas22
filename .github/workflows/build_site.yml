@@ -15,4 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: date +%s)
+      run: docker build . -t paas23
+    - name: Run the container 
+      run: docker run -it -v `pwd`:/home/dev/paas22 --rm paas23
+    - name: deploying
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: _site
+
